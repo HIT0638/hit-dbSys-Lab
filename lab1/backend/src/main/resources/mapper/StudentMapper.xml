@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.edu.hit.backend.mapper.StudentMapper">
+    <!-- 将类对象的属性与对应表属性名称不一样的进行映射，使其相互匹配   -->
+    <resultMap id="StudentEntityMap" type="cn.edu.hit.backend.pojo.Student">
+        <id column="id" property="student_id"></id>
+    </resultMap>
+    <select id="getAllStudents"
+            resultMap="StudentEntityMap">
+        select * from students;
+    </select>
+
+
+</mapper>
