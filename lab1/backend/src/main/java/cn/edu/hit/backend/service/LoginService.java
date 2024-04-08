@@ -16,7 +16,6 @@ public class LoginService {
 
     public ApiResponse login(String Id, String password){
         Login user = findUserById(Id);
-        System.out.println(user.toString());
 
         if (user == null) return new ApiResponse(false, "用户不存在", null, "");
 

@@ -24,16 +24,20 @@ const Login = () => {
         try {
             const user = { userId, password };
             const response = await request.post('/login', user);
-            console.log(response);
+            // console.log(response);
+            // console.log(response.data.data.userName);
 
             if(response.data.success){
+
                 setUserName(response.data.data.userName);
                 setUserRole(response.data.data.userRole);
+                console.log('userName:', userName, 'userRole:', userRole);
 
                 // 保存到 localStorage
                 localStorage.setItem('userId', userId);
-                localStorage.setItem('userName', userName);
-                localStorage.setItem('userRole', userRole);
+                localStorage.setItem('userName', response.data.data.userName);
+                localStorage.setItem('userRole', response.data.data.userRole);
+                // console.log('LocalStorage Set:', localStorage.getItem('userName'), localStorage.getItem('userRole'));
 
                 // 根据用户角色进行跳转
                 switch (userRole) {
@@ -51,7 +55,7 @@ const Login = () => {
 
         } catch (error) {
 
-            alert("登录失败, 用户名或密码错误。" + userId + "，" + password)
+            alert("登录失败, 用户名或密码错误。")
             // 错误处理，例如设置错误状态
             console.error('登录失败', error);
             console.log(userId, password)

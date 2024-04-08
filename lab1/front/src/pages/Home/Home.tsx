@@ -1,24 +1,30 @@
 import React from 'react';
 import TemplateTester from '@/components/TemplateTester/TemplateTester';
-import {Typography, Stack, Container, Button} from '@mui/material';
+import {Typography, Stack, Container, Button, Grid, Box, Paper} from '@mui/material';
 import Link from 'react-router-dom'
 import Counter from '@/components/Counter/Counter';
+import Head from '@/components/Head/Head'
+import LeftAside from "@/components/LeftAside/LeftAside";
+import RightAside from "@/components/RightAside/RightAside";
+import Main from "@/components/Main/Main";
+
 
 const Home = () => {
   return (
-    <Container sx={{ py: 2, position: 'relative' }}>
-        <div><Button><a href={'login'}>to Login</a></Button></div>
-      <Stack gap={1} my={2}>
-        <Typography textAlign="center" variant="h2">
-          Vite-MUI-TS Template
-        </Typography>
-        <Typography textAlign="center" variant="subtitle1">
-          React + TS + Vite + Redux + RTK + MUI + RRD + Prettier
-        </Typography>
-      </Stack>
-      <TemplateTester />
-      <Counter />
-    </Container>
+      <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+          <Head />
+          <Grid container sx={{ flexGrow: 1 }}>
+              <Grid item xs={2.5}>
+                  <LeftAside/>
+              </Grid>
+              <Grid item xs={7}>
+                  <Main />
+              </Grid>
+              <Grid item xs={2.5}>
+                  <RightAside/>
+              </Grid>
+          </Grid>
+      </Box>
   );
 };
 
