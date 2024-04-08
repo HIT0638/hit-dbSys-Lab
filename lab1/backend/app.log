@@ -2383,3 +2383,21 @@ java.lang.NullPointerException: Cannot invoke "cn.edu.hit.backend.pojo.Login.toS
 2024-04-08T17:50:17.847+08:00 DEBUG 27128 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
 2024-04-08T17:50:17.848+08:00 DEBUG 27128 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=true, message=Login successful, data=Login(userId=null, password=null, userName= (truncated)...]
 2024-04-08T17:50:17.852+08:00 DEBUG 27128 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T18:00:03.995+08:00 DEBUG 27128 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T18:00:03.996+08:00 DEBUG 27128 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T18:00:03.997+08:00 DEBUG 27128 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=2021112228, password=123456789}]
+2024-04-08T18:00:04.000+08:00 DEBUG 27128 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T18:00:04.000+08:00 DEBUG 27128 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=true, message=Login successful, data=Login(userId=null, password=null, userName= (truncated)...]
+2024-04-08T18:00:04.001+08:00 DEBUG 27128 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T18:04:37.222+08:00 DEBUG 27128 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T18:04:37.223+08:00 DEBUG 27128 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T18:04:37.225+08:00 DEBUG 27128 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=2021111406, password=123456}]
+2024-04-08T18:04:37.229+08:00 DEBUG 27128 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T18:04:37.229+08:00 DEBUG 27128 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=true, message=Login successful, data=Login(userId=null, password=null, userName= (truncated)...]
+2024-04-08T18:04:37.230+08:00 DEBUG 27128 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T18:04:45.141+08:00 DEBUG 27128 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T18:04:45.142+08:00 DEBUG 27128 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T18:04:45.143+08:00 DEBUG 27128 --- [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=2021111406, password=123456}]
+2024-04-08T18:04:45.155+08:00 DEBUG 27128 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T18:04:45.156+08:00 DEBUG 27128 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=true, message=Login successful, data=Login(userId=null, password=null, userName= (truncated)...]
+2024-04-08T18:04:45.156+08:00 DEBUG 27128 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
