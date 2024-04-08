@@ -8,4 +8,6 @@ public interface StudentMapper {
     Integer addStudent(Student student);
 
     List<Student> findAll();
+
+    Student findById(String Id);
 }

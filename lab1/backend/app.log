@@ -1060,3 +1060,1104 @@ Caused by: java.lang.ClassNotFoundException: Cannot find class: cn.edu.hit.backe
 2024-04-08T13:09:11.372+08:00 DEBUG 28508 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
 2024-04-08T13:09:11.373+08:00 DEBUG 28508 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-04-08T13:09:11.388+08:00  INFO 28508 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.15 seconds (process running for 1968.323)
+2024-04-08T15:45:38.377+08:00  INFO 7884 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 7884 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T15:45:38.379+08:00  INFO 7884 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T15:45:39.747+08:00 DEBUG 7884 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T15:45:39.813+08:00 DEBUG 7884 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T15:45:39.826+08:00 DEBUG 7884 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T15:45:39.832+08:00 DEBUG 7884 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T15:45:39.963+08:00  INFO 7884 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 1.953 seconds (process running for 2.584)
+2024-04-08T15:45:43.783+08:00  INFO 7884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-08T15:45:43.783+08:00 DEBUG 7884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-04-08T15:45:43.783+08:00 DEBUG 7884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-04-08T15:45:43.783+08:00 DEBUG 7884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-04-08T15:45:43.784+08:00 DEBUG 7884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@555e5eb5
+2024-04-08T15:45:43.784+08:00 DEBUG 7884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@67d1f21
+2024-04-08T15:45:43.785+08:00 DEBUG 7884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-08T15:45:43.785+08:00  INFO 7884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-04-08T15:45:43.791+08:00 DEBUG 7884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/student/getAll", parameters={}
+2024-04-08T15:45:43.798+08:00 DEBUG 7884 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.StudentController#getAll()
+2024-04-08T15:45:43.809+08:00 DEBUG 7884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): cn.edu.hit.backend.mapper.StudentMapper.findAll
+2024-04-08T15:45:43.811+08:00 ERROR 7884 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): cn.edu.hit.backend.mapper.StudentMapper.findAll] with root cause
+
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): cn.edu.hit.backend.mapper.StudentMapper.findAll
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:229) ~[mybatis-3.5.13.jar:3.5.13]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1710) ~[na:na]
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at jdk.proxy3/jdk.proxy3.$Proxy66.findAll(Unknown Source) ~[na:na]
+	at cn.edu.hit.backend.service.StudentService.getAllStudents(StudentService.java:16) ~[classes/:na]
+	at cn.edu.hit.backend.controller.StudentController.getAll(StudentController.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2024-04-08T15:45:43.818+08:00 DEBUG 7884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2024-04-08T15:45:43.821+08:00 DEBUG 7884 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2024-04-08T15:45:43.840+08:00 DEBUG 7884 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2024-04-08T15:45:43.846+08:00 DEBUG 7884 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
+2024-04-08T15:46:53.764+08:00 DEBUG 7884 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/student/getAll", parameters={}
+2024-04-08T15:46:53.764+08:00 DEBUG 7884 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.StudentController#getAll()
+2024-04-08T15:46:53.764+08:00 DEBUG 7884 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): cn.edu.hit.backend.mapper.StudentMapper.findAll
+2024-04-08T15:46:53.765+08:00 ERROR 7884 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): cn.edu.hit.backend.mapper.StudentMapper.findAll] with root cause
+
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): cn.edu.hit.backend.mapper.StudentMapper.findAll
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:229) ~[mybatis-3.5.13.jar:3.5.13]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1710) ~[na:na]
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at jdk.proxy3/jdk.proxy3.$Proxy66.findAll(Unknown Source) ~[na:na]
+	at cn.edu.hit.backend.service.StudentService.getAllStudents(StudentService.java:16) ~[classes/:na]
+	at cn.edu.hit.backend.controller.StudentController.getAll(StudentController.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2024-04-08T15:46:53.766+08:00 DEBUG 7884 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2024-04-08T15:46:53.766+08:00 DEBUG 7884 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2024-04-08T15:46:53.781+08:00 DEBUG 7884 --- [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2024-04-08T15:46:53.781+08:00 DEBUG 7884 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
+2024-04-08T15:46:55.644+08:00  INFO 7884 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 7884 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T15:46:55.644+08:00  INFO 7884 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T15:46:55.862+08:00 DEBUG 7884 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T15:46:55.870+08:00 DEBUG 7884 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T15:46:55.875+08:00 DEBUG 7884 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T15:46:55.877+08:00 DEBUG 7884 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T15:46:55.908+08:00  INFO 7884 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.284 seconds (process running for 78.53)
+2024-04-08T15:46:57.364+08:00  INFO 7884 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 7884 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T15:46:57.364+08:00  INFO 7884 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T15:46:57.524+08:00 DEBUG 7884 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T15:46:57.530+08:00 DEBUG 7884 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T15:46:57.533+08:00 DEBUG 7884 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T15:46:57.535+08:00 DEBUG 7884 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T15:46:57.556+08:00  INFO 7884 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.204 seconds (process running for 80.178)
+2024-04-08T15:47:05.975+08:00  INFO 31240 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 31240 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T15:47:05.977+08:00  INFO 31240 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T15:47:07.084+08:00 DEBUG 31240 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T15:47:07.136+08:00 DEBUG 31240 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T15:47:07.151+08:00 DEBUG 31240 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T15:47:07.157+08:00 DEBUG 31240 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T15:47:07.255+08:00  INFO 31240 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 1.567 seconds (process running for 2.034)
+2024-04-08T15:47:08.637+08:00  INFO 31240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-08T15:47:08.637+08:00 DEBUG 31240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-04-08T15:47:08.637+08:00 DEBUG 31240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-04-08T15:47:08.637+08:00 DEBUG 31240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-04-08T15:47:08.638+08:00 DEBUG 31240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@221c4566
+2024-04-08T15:47:08.638+08:00 DEBUG 31240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@b4770dd
+2024-04-08T15:47:08.639+08:00 DEBUG 31240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-08T15:47:08.639+08:00  INFO 31240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-04-08T15:47:08.645+08:00 DEBUG 31240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/student/getAll", parameters={}
+2024-04-08T15:47:08.652+08:00 DEBUG 31240 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.StudentController#getAll()
+2024-04-08T15:47:08.671+08:00 DEBUG 31240 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Using 'text/html', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [text/plain, */*, application/json, application/*+json]
+2024-04-08T15:47:08.672+08:00 DEBUG 31240 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Writing ["<h1>qqq</h1>"]
+2024-04-08T15:47:08.679+08:00 DEBUG 31240 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T15:47:22.412+08:00  INFO 6804 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 6804 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T15:47:22.413+08:00  INFO 6804 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T15:47:23.541+08:00 DEBUG 6804 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T15:47:23.595+08:00 DEBUG 6804 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T15:47:23.607+08:00 DEBUG 6804 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T15:47:23.612+08:00 DEBUG 6804 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T15:47:23.716+08:00  INFO 6804 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 1.588 seconds (process running for 2.043)
+2024-04-08T15:47:24.699+08:00  INFO 6804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-08T15:47:24.699+08:00 DEBUG 6804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-04-08T15:47:24.699+08:00 DEBUG 6804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-04-08T15:47:24.699+08:00 DEBUG 6804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-04-08T15:47:24.700+08:00 DEBUG 6804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@263e8e84
+2024-04-08T15:47:24.700+08:00 DEBUG 6804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6c02346f
+2024-04-08T15:47:24.700+08:00 DEBUG 6804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-08T15:47:24.700+08:00  INFO 6804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-04-08T15:47:24.706+08:00 DEBUG 6804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/student/getAll", parameters={}
+2024-04-08T15:47:24.715+08:00 DEBUG 6804 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.StudentController#getAll()
+2024-04-08T15:47:24.725+08:00 DEBUG 6804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): cn.edu.hit.backend.mapper.StudentMapper.findAll
+2024-04-08T15:47:24.727+08:00 ERROR 6804 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): cn.edu.hit.backend.mapper.StudentMapper.findAll] with root cause
+
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): cn.edu.hit.backend.mapper.StudentMapper.findAll
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:229) ~[mybatis-3.5.13.jar:3.5.13]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1710) ~[na:na]
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at jdk.proxy3/jdk.proxy3.$Proxy66.findAll(Unknown Source) ~[na:na]
+	at cn.edu.hit.backend.service.StudentService.getAllStudents(StudentService.java:16) ~[classes/:na]
+	at cn.edu.hit.backend.controller.StudentController.getAll(StudentController.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2024-04-08T15:47:24.736+08:00 DEBUG 6804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2024-04-08T15:47:24.738+08:00 DEBUG 6804 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2024-04-08T15:47:24.760+08:00 DEBUG 6804 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2024-04-08T15:47:24.768+08:00 DEBUG 6804 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
+2024-04-08T15:50:52.522+08:00  INFO 11652 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 11652 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T15:50:52.524+08:00  INFO 11652 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T15:50:53.758+08:00 DEBUG 11652 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T15:50:53.817+08:00 DEBUG 11652 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T15:50:53.830+08:00 DEBUG 11652 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T15:50:53.837+08:00 DEBUG 11652 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T15:50:53.951+08:00  INFO 11652 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 1.724 seconds (process running for 2.2)
+2024-04-08T15:50:58.342+08:00  INFO 11652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-08T15:50:58.342+08:00 DEBUG 11652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-04-08T15:50:58.342+08:00 DEBUG 11652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-04-08T15:50:58.342+08:00 DEBUG 11652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-04-08T15:50:58.344+08:00 DEBUG 11652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@263e8e84
+2024-04-08T15:50:58.344+08:00 DEBUG 11652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6c02346f
+2024-04-08T15:50:58.344+08:00 DEBUG 11652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-08T15:50:58.344+08:00  INFO 11652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-04-08T15:50:58.350+08:00 DEBUG 11652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/student/getAll", parameters={}
+2024-04-08T15:50:58.360+08:00 DEBUG 11652 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.StudentController#getAll()
+2024-04-08T15:50:58.369+08:00 DEBUG 11652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Failed to complete request: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): cn.edu.hit.backend.mapper.StudentMapper.findAll
+2024-04-08T15:50:58.371+08:00 ERROR 11652 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): cn.edu.hit.backend.mapper.StudentMapper.findAll] with root cause
+
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): cn.edu.hit.backend.mapper.StudentMapper.findAll
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:229) ~[mybatis-3.5.13.jar:3.5.13]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedInvoker$0(MybatisMapperProxy.java:111) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1710) ~[na:na]
+	at com.baomidou.mybatisplus.core.toolkit.CollectionUtils.computeIfAbsent(CollectionUtils.java:115) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedInvoker(MybatisMapperProxy.java:98) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:89) ~[mybatis-plus-core-3.5.3.1.jar:3.5.3.1]
+	at jdk.proxy3/jdk.proxy3.$Proxy66.findAll(Unknown Source) ~[na:na]
+	at cn.edu.hit.backend.service.StudentService.getAllStudents(StudentService.java:16) ~[classes/:na]
+	at cn.edu.hit.backend.controller.StudentController.getAll(StudentController.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2024-04-08T15:50:58.377+08:00 DEBUG 11652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2024-04-08T15:50:58.379+08:00 DEBUG 11652 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2024-04-08T15:50:58.398+08:00 DEBUG 11652 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2024-04-08T15:50:58.402+08:00 DEBUG 11652 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
+2024-04-08T15:51:11.472+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 21124 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T15:51:11.473+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T15:51:12.617+08:00 DEBUG 21124 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T15:51:12.686+08:00 DEBUG 21124 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T15:51:12.703+08:00 DEBUG 21124 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T15:51:12.711+08:00 DEBUG 21124 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T15:51:12.842+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 1.679 seconds (process running for 2.172)
+2024-04-08T15:51:13.082+08:00  INFO 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-08T15:51:13.082+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-04-08T15:51:13.082+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-04-08T15:51:13.082+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-04-08T15:51:13.083+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@46cb493
+2024-04-08T15:51:13.084+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@c5b3ebb
+2024-04-08T15:51:13.084+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-08T15:51:13.084+08:00  INFO 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-04-08T15:51:13.090+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/student/getAll", parameters={}
+2024-04-08T15:51:13.096+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.StudentController#getAll()
+2024-04-08T15:51:13.370+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2024-04-08T15:51:13.372+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [cn.edu.hit.backend.pojo.ApiResponse@40a6db87]
+2024-04-08T15:51:13.390+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T15:51:27.418+08:00  WARN 21124 --- [Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1570)
+2024-04-08T15:51:27.471+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 21124 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T15:51:27.471+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T15:51:27.694+08:00 DEBUG 21124 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T15:51:27.702+08:00 DEBUG 21124 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T15:51:27.707+08:00 DEBUG 21124 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T15:51:27.709+08:00 DEBUG 21124 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T15:51:27.737+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.285 seconds (process running for 17.066)
+2024-04-08T15:51:29.231+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 21124 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T15:51:29.231+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T15:51:29.389+08:00 DEBUG 21124 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T15:51:29.395+08:00 DEBUG 21124 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T15:51:29.402+08:00 DEBUG 21124 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T15:51:29.404+08:00 DEBUG 21124 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T15:51:29.422+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.207 seconds (process running for 18.751)
+2024-04-08T15:57:57.320+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 21124 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T15:57:57.321+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T15:57:57.516+08:00  WARN 21124 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'studentController': Unsatisfied dependency expressed through field 'studentService': No qualifying bean of type 'cn.edu.hit.backend.service.StudentService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-04-08T15:57:57.552+08:00 ERROR 21124 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field studentService in cn.edu.hit.backend.controller.StudentController required a bean of type 'cn.edu.hit.backend.service.StudentService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'cn.edu.hit.backend.service.StudentService' in your configuration.
+
+2024-04-08T15:57:58.998+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 21124 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T15:57:58.998+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T15:57:59.196+08:00 DEBUG 21124 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T15:57:59.204+08:00 DEBUG 21124 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T15:57:59.208+08:00 DEBUG 21124 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T15:57:59.209+08:00 DEBUG 21124 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T15:57:59.235+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.253 seconds (process running for 408.565)
+2024-04-08T15:59:29.271+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 21124 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T15:59:29.272+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T15:59:29.463+08:00  WARN 21124 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'studentController' defined in file [E:\CodeData\dbsysLab\lab1\backend\target\classes\cn\edu\hit\backend\controller\StudentController.class]: Post-processing of merged bean definition failed
+2024-04-08T15:59:29.468+08:00 ERROR 21124 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'studentController' defined in file [E:\CodeData\dbsysLab\lab1\backend\target\classes\cn\edu\hit\backend\controller\StudentController.class]: Post-processing of merged bean definition failed
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:575) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:950) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.5.jar:3.1.5]
+	at cn.edu.hit.backend.BackendApplication.main(BackendApplication.java:14) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.5.jar:3.1.5]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [cn.edu.hit.backend.controller.StudentController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4d9f4b9b]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:732) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:664) ~[spring-core-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:360) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:341) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:297) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1083) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572) ~[spring-beans-6.0.13.jar:6.0.13]
+	... 18 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: cn/edu/hit/backend/service/StudentService
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3496) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2552) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:727) ~[spring-core-6.0.13.jar:6.0.13]
+	... 24 common frames omitted
+Caused by: java.lang.ClassNotFoundException: cn.edu.hit.backend.service.StudentService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:529) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:508) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.1.5.jar:3.1.5]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	... 28 common frames omitted
+
+2024-04-08T15:59:31.936+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 21124 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T15:59:31.936+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T15:59:32.110+08:00 DEBUG 21124 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T15:59:32.118+08:00 DEBUG 21124 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T15:59:32.122+08:00 DEBUG 21124 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T15:59:32.125+08:00 DEBUG 21124 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T15:59:32.154+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.231 seconds (process running for 501.483)
+2024-04-08T16:00:14.372+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 21124 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:00:14.372+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:00:14.597+08:00 DEBUG 21124 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:00:14.605+08:00 DEBUG 21124 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:00:14.608+08:00 DEBUG 21124 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:00:14.611+08:00 DEBUG 21124 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:00:14.633+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.281 seconds (process running for 543.962)
+2024-04-08T16:01:52.718+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 21124 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:01:52.718+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:01:52.891+08:00 DEBUG 21124 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:01:52.899+08:00 DEBUG 21124 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:01:52.902+08:00 DEBUG 21124 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:01:52.904+08:00 DEBUG 21124 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:01:52.928+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.223 seconds (process running for 642.257)
+2024-04-08T16:02:38.478+08:00  INFO 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-08T16:02:38.478+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-04-08T16:02:38.478+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-04-08T16:02:38.478+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-04-08T16:02:38.479+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@977d39f
+2024-04-08T16:02:38.479+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@7b02cc1
+2024-04-08T16:02:38.479+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-08T16:02:38.479+08:00  INFO 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-04-08T16:02:38.480+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/student/All", parameters={}
+2024-04-08T16:02:38.484+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-08T16:02:38.488+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-04-08T16:02:38.488+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-04-08T16:02:38.495+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}
+2024-04-08T16:02:38.497+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2024-04-08T16:02:38.539+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2024-04-08T16:02:38.546+08:00 DEBUG 21124 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
+2024-04-08T16:02:39.179+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 21124 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:02:39.179+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:02:39.342+08:00 DEBUG 21124 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:02:39.348+08:00 DEBUG 21124 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:02:39.352+08:00 DEBUG 21124 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:02:39.353+08:00 DEBUG 21124 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:02:39.376+08:00  INFO 21124 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.212 seconds (process running for 688.705)
+2024-04-08T16:02:43.175+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 18136 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:02:43.177+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:02:44.407+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:02:44.486+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:02:44.512+08:00 DEBUG 18136 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:02:44.519+08:00 DEBUG 18136 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:02:44.646+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 1.768 seconds (process running for 2.245)
+2024-04-08T16:02:50.189+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 18136 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:02:50.190+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:02:50.532+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:02:50.542+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:02:50.549+08:00 DEBUG 18136 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:02:50.551+08:00 DEBUG 18136 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:02:50.581+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.42 seconds (process running for 8.179)
+2024-04-08T16:02:53.077+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 18136 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:02:53.078+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:02:53.245+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:02:53.252+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:02:53.255+08:00 DEBUG 18136 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:02:53.258+08:00 DEBUG 18136 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:02:53.280+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.218 seconds (process running for 10.878)
+2024-04-08T16:10:17.045+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 18136 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:10:17.046+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:10:17.213+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:10:17.220+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:10:17.224+08:00 DEBUG 18136 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:10:17.226+08:00 DEBUG 18136 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:10:17.250+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.219 seconds (process running for 454.848)
+2024-04-08T16:10:18.709+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 18136 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:10:18.710+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:10:18.855+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:10:18.861+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:10:18.864+08:00 DEBUG 18136 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:10:18.865+08:00 DEBUG 18136 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:10:18.885+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.19 seconds (process running for 456.482)
+2024-04-08T16:11:13.207+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 18136 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:11:13.207+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:11:13.373+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:11:13.382+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:11:13.386+08:00 DEBUG 18136 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:11:13.388+08:00 DEBUG 18136 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:11:13.414+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.223 seconds (process running for 511.012)
+2024-04-08T16:11:14.871+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 18136 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:11:14.872+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:11:15.025+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:11:15.032+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:11:15.035+08:00 DEBUG 18136 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:11:15.036+08:00 DEBUG 18136 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:11:15.058+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.2 seconds (process running for 512.655)
+2024-04-08T16:12:20.574+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 18136 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:12:20.575+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:12:20.737+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:12:20.743+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:12:20.745+08:00 DEBUG 18136 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:12:20.747+08:00 DEBUG 18136 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:12:20.764+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.204 seconds (process running for 578.362)
+2024-04-08T16:12:22.239+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 18136 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:12:22.239+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:12:22.428+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:12:22.438+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:12:22.443+08:00 DEBUG 18136 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:12:22.446+08:00 DEBUG 18136 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:12:22.475+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.251 seconds (process running for 580.073)
+2024-04-08T16:12:47.283+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 18136 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:12:47.284+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:12:47.468+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:12:47.475+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:12:47.481+08:00 DEBUG 18136 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:12:47.483+08:00 DEBUG 18136 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:12:47.511+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.241 seconds (process running for 605.108)
+2024-04-08T16:12:48.965+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 18136 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:12:48.965+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:12:49.113+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:12:49.122+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:12:49.125+08:00 DEBUG 18136 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:12:49.127+08:00 DEBUG 18136 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:12:49.144+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.189 seconds (process running for 606.742)
+2024-04-08T16:15:11.742+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 18136 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:15:11.742+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:15:11.957+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:15:11.964+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:15:11.969+08:00 DEBUG 18136 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:15:11.971+08:00 DEBUG 18136 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:15:11.997+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.27 seconds (process running for 749.595)
+2024-04-08T16:16:45.991+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 18136 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:16:45.991+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:16:46.142+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:16:46.149+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:16:46.152+08:00 DEBUG 18136 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:16:46.154+08:00 DEBUG 18136 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:16:46.175+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.196 seconds (process running for 843.773)
+2024-04-08T16:22:17.375+08:00  INFO 18136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-08T16:22:17.376+08:00 DEBUG 18136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-04-08T16:22:17.376+08:00 DEBUG 18136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-04-08T16:22:17.376+08:00 DEBUG 18136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-04-08T16:22:17.378+08:00 DEBUG 18136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@75a70fd2
+2024-04-08T16:22:17.379+08:00 DEBUG 18136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@11a88fb9
+2024-04-08T16:22:17.383+08:00 DEBUG 18136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-08T16:22:17.385+08:00  INFO 18136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2024-04-08T16:22:17.404+08:00 DEBUG 18136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : OPTIONS "/login", parameters={}
+2024-04-08T16:22:17.414+08:00 DEBUG 18136 --- [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-08T16:22:17.442+08:00 DEBUG 18136 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 403 FORBIDDEN
+2024-04-08T16:25:00.857+08:00 DEBUG 18136 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : OPTIONS "/login", parameters={}
+2024-04-08T16:25:00.857+08:00 DEBUG 18136 --- [http-nio-8080-exec-7] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-08T16:25:00.858+08:00 DEBUG 18136 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 403 FORBIDDEN
+2024-04-08T16:25:07.365+08:00 DEBUG 18136 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : OPTIONS "/login", parameters={}
+2024-04-08T16:25:07.366+08:00 DEBUG 18136 --- [http-nio-8080-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-08T16:25:07.367+08:00 DEBUG 18136 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 403 FORBIDDEN
+2024-04-08T16:25:09.750+08:00 DEBUG 18136 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : OPTIONS "/login", parameters={}
+2024-04-08T16:25:09.751+08:00 DEBUG 18136 --- [http-nio-8080-exec-9] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-08T16:25:09.752+08:00 DEBUG 18136 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 403 FORBIDDEN
+2024-04-08T16:26:11.922+08:00 DEBUG 18136 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : OPTIONS "/login", parameters={}
+2024-04-08T16:26:11.922+08:00 DEBUG 18136 --- [http-nio-8080-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-08T16:26:11.923+08:00 DEBUG 18136 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 403 FORBIDDEN
+2024-04-08T16:29:03.388+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 18136 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:29:03.388+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:29:03.814+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:29:03.829+08:00 DEBUG 18136 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:29:03.837+08:00 DEBUG 18136 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:29:03.841+08:00 DEBUG 18136 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:29:03.921+08:00  INFO 18136 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.559 seconds (process running for 1581.519)
+2024-04-08T16:30:06.547+08:00  INFO 27196 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 27196 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:30:06.548+08:00  INFO 27196 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:30:07.785+08:00 DEBUG 27196 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:30:07.849+08:00 DEBUG 27196 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:30:07.860+08:00 DEBUG 27196 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:30:07.865+08:00 DEBUG 27196 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:30:07.973+08:00  INFO 27196 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 1.756 seconds (process running for 2.324)
+2024-04-08T16:30:15.609+08:00  INFO 27196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-08T16:30:15.610+08:00 DEBUG 27196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-04-08T16:30:15.611+08:00 DEBUG 27196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-04-08T16:30:15.611+08:00 DEBUG 27196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-04-08T16:30:15.611+08:00 DEBUG 27196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@35085b73
+2024-04-08T16:30:15.612+08:00 DEBUG 27196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3cc9254d
+2024-04-08T16:30:15.612+08:00 DEBUG 27196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-08T16:30:15.612+08:00  INFO 27196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-04-08T16:30:15.625+08:00 DEBUG 27196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : OPTIONS "/login", parameters={}
+2024-04-08T16:30:15.637+08:00 DEBUG 27196 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:30:15.650+08:00 DEBUG 27196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T16:30:47.320+08:00  INFO 27196 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 27196 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:30:47.321+08:00  INFO 27196 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:30:47.562+08:00 DEBUG 27196 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:30:47.572+08:00 DEBUG 27196 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:30:47.577+08:00 DEBUG 27196 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:30:47.579+08:00 DEBUG 27196 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:30:47.618+08:00  INFO 27196 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.315 seconds (process running for 41.968)
+2024-04-08T16:30:49.079+08:00  INFO 27196 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 27196 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:30:49.079+08:00  INFO 27196 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:30:49.260+08:00 DEBUG 27196 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:30:49.270+08:00 DEBUG 27196 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:30:49.274+08:00 DEBUG 27196 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:30:49.276+08:00 DEBUG 27196 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:30:49.299+08:00  INFO 27196 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 0.234 seconds (process running for 43.649)
+2024-04-08T16:31:03.183+08:00  INFO 34664 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 34664 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:31:03.185+08:00  INFO 34664 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:31:04.351+08:00 DEBUG 34664 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:31:04.409+08:00 DEBUG 34664 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:31:04.421+08:00 DEBUG 34664 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:31:04.428+08:00 DEBUG 34664 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:31:04.539+08:00  INFO 34664 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 1.672 seconds (process running for 2.186)
+2024-04-08T16:31:09.447+08:00  INFO 34664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-08T16:31:09.448+08:00 DEBUG 34664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-04-08T16:31:09.448+08:00 DEBUG 34664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-04-08T16:31:09.448+08:00 DEBUG 34664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-04-08T16:31:09.449+08:00 DEBUG 34664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@76feba3c
+2024-04-08T16:31:09.449+08:00 DEBUG 34664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@31e956ec
+2024-04-08T16:31:09.450+08:00 DEBUG 34664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-08T16:31:09.450+08:00  INFO 34664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-04-08T16:31:09.459+08:00 DEBUG 34664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:31:09.468+08:00 DEBUG 34664 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:31:09.525+08:00 DEBUG 34664 --- [http-nio-8080-exec-1] o.s.web.method.HandlerMethod             : Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<cn.edu.hit.backend.pojo.ApiResponse> cn.edu.hit.backend.controller.LoginController.login(java.util.Map<java.lang.String, java.lang.Object>): JSON parse error: Cannot deserialize value of type `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` from Array value (token `JsonToken.START_ARRAY`)
+2024-04-08T16:31:09.527+08:00  WARN 34664 --- [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.util.LinkedHashMap<java.lang.String,java.lang.Object>` from Array value (token `JsonToken.START_ARRAY`)]
+2024-04-08T16:31:09.528+08:00 DEBUG 34664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 400 BAD_REQUEST
+2024-04-08T16:31:09.532+08:00 DEBUG 34664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}
+2024-04-08T16:31:09.534+08:00 DEBUG 34664 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-04-08T16:31:09.545+08:00 DEBUG 34664 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:31:09.546+08:00 DEBUG 34664 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Apr 08 16:31:09 CST 2024, status=400, error=Bad Request, trace=org.springframework.ht (truncated)...]
+2024-04-08T16:31:09.566+08:00 DEBUG 34664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 400
+2024-04-08T16:33:41.928+08:00  INFO 27516 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 27516 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:33:41.930+08:00  INFO 27516 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:33:43.142+08:00 DEBUG 27516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:33:43.201+08:00 DEBUG 27516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:33:43.215+08:00 DEBUG 27516 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:33:43.222+08:00 DEBUG 27516 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:33:43.328+08:00  INFO 27516 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 1.74 seconds (process running for 2.4)
+2024-04-08T16:34:38.531+08:00  INFO 27516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-08T16:34:38.531+08:00 DEBUG 27516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-04-08T16:34:38.531+08:00 DEBUG 27516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-04-08T16:34:38.532+08:00 DEBUG 27516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-04-08T16:34:38.533+08:00 DEBUG 27516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@35085b73
+2024-04-08T16:34:38.534+08:00 DEBUG 27516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3cc9254d
+2024-04-08T16:34:38.534+08:00 DEBUG 27516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-08T16:34:38.535+08:00  INFO 27516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-04-08T16:34:38.546+08:00 DEBUG 27516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:34:38.563+08:00 DEBUG 27516 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:34:38.632+08:00 DEBUG 27516 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=1, password=112}]
+2024-04-08T16:34:39.055+08:00 DEBUG 27516 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:34:39.058+08:00 DEBUG 27516 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [cn.edu.hit.backend.pojo.ApiResponse@655699e2]
+2024-04-08T16:34:39.083+08:00 DEBUG 27516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T16:35:28.543+08:00  INFO 14160 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 14160 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:35:28.544+08:00  INFO 14160 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:35:29.739+08:00 DEBUG 14160 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:35:29.798+08:00 DEBUG 14160 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:35:29.811+08:00 DEBUG 14160 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:35:29.817+08:00 DEBUG 14160 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:35:29.930+08:00  INFO 14160 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 1.685 seconds (process running for 2.151)
+2024-04-08T16:35:35.118+08:00  INFO 14160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-08T16:35:35.119+08:00 DEBUG 14160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-04-08T16:35:35.119+08:00 DEBUG 14160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-04-08T16:35:35.119+08:00 DEBUG 14160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-04-08T16:35:35.119+08:00 DEBUG 14160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1256de59
+2024-04-08T16:35:35.120+08:00 DEBUG 14160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@648f474d
+2024-04-08T16:35:35.120+08:00 DEBUG 14160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-08T16:35:35.120+08:00  INFO 14160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-04-08T16:35:35.128+08:00 DEBUG 14160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:35:35.138+08:00 DEBUG 14160 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:35:35.181+08:00 DEBUG 14160 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=1123, password=11233}]
+2024-04-08T16:35:35.484+08:00 DEBUG 14160 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:35:35.486+08:00 DEBUG 14160 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [cn.edu.hit.backend.pojo.ApiResponse@5f6b7daa]
+2024-04-08T16:35:35.499+08:00 DEBUG 14160 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T16:35:59.653+08:00  INFO 22084 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 22084 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:35:59.655+08:00  INFO 22084 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:36:00.822+08:00 DEBUG 22084 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:36:00.877+08:00 DEBUG 22084 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:36:00.890+08:00 DEBUG 22084 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:36:00.896+08:00 DEBUG 22084 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:36:01.011+08:00  INFO 22084 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 1.715 seconds (process running for 2.183)
+2024-04-08T16:36:04.684+08:00  INFO 22084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-08T16:36:04.684+08:00 DEBUG 22084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-04-08T16:36:04.684+08:00 DEBUG 22084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-04-08T16:36:04.685+08:00 DEBUG 22084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-04-08T16:36:04.686+08:00 DEBUG 22084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@23c6dbb
+2024-04-08T16:36:04.686+08:00 DEBUG 22084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@2ac9b8c7
+2024-04-08T16:36:04.687+08:00 DEBUG 22084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-08T16:36:04.687+08:00  INFO 22084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2024-04-08T16:36:04.695+08:00 DEBUG 22084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:36:04.704+08:00 DEBUG 22084 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:36:04.751+08:00 DEBUG 22084 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=1123, password=123123}]
+2024-04-08T16:36:04.953+08:00 DEBUG 22084 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:36:04.954+08:00 DEBUG 22084 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [cn.edu.hit.backend.pojo.ApiResponse@3e207930]
+2024-04-08T16:36:04.965+08:00 DEBUG 22084 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T16:36:27.033+08:00  INFO 23548 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 23548 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:36:27.034+08:00  INFO 23548 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:36:28.207+08:00 DEBUG 23548 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:36:28.260+08:00 DEBUG 23548 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:36:28.272+08:00 DEBUG 23548 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:36:28.278+08:00 DEBUG 23548 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:36:28.383+08:00  INFO 23548 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 1.671 seconds (process running for 2.177)
+2024-04-08T16:36:28.666+08:00  INFO 23548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-08T16:36:28.667+08:00 DEBUG 23548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-04-08T16:36:28.667+08:00 DEBUG 23548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-04-08T16:36:28.667+08:00 DEBUG 23548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-04-08T16:36:28.668+08:00 DEBUG 23548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@35085b73
+2024-04-08T16:36:28.668+08:00 DEBUG 23548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3cc9254d
+2024-04-08T16:36:28.668+08:00 DEBUG 23548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-08T16:36:28.668+08:00  INFO 23548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-04-08T16:36:28.674+08:00 DEBUG 23548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:36:28.681+08:00 DEBUG 23548 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:36:28.737+08:00 DEBUG 23548 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=1123, password=123123}]
+2024-04-08T16:36:28.914+08:00 DEBUG 23548 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:36:28.915+08:00 DEBUG 23548 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=false, message=用户不存在, data=null, error=)]
+2024-04-08T16:36:28.927+08:00 DEBUG 23548 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T16:37:11.307+08:00 DEBUG 23548 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:37:11.308+08:00 DEBUG 23548 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:37:11.310+08:00 DEBUG 23548 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=1123, password=123123}]
+2024-04-08T16:37:11.314+08:00 DEBUG 23548 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:37:11.314+08:00 DEBUG 23548 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=false, message=用户不存在, data=null, error=)]
+2024-04-08T16:37:11.315+08:00 DEBUG 23548 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T16:38:25.278+08:00 DEBUG 23548 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:38:25.278+08:00 DEBUG 23548 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:38:25.281+08:00 DEBUG 23548 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=1123, password=123123}]
+2024-04-08T16:38:25.286+08:00 DEBUG 23548 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:38:25.287+08:00 DEBUG 23548 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=false, message=用户不存在, data=null, error=)]
+2024-04-08T16:38:25.289+08:00 DEBUG 23548 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T16:38:47.392+08:00 DEBUG 23548 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:38:47.393+08:00 DEBUG 23548 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:38:47.395+08:00 DEBUG 23548 --- [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=6, password=123456}]
+2024-04-08T16:38:47.402+08:00 DEBUG 23548 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:38:47.402+08:00 DEBUG 23548 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=false, message=用户名或密码错误, data=null, error=error)]
+2024-04-08T16:38:47.403+08:00 DEBUG 23548 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T16:40:13.935+08:00  INFO 33664 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 33664 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:40:13.938+08:00  INFO 33664 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:40:15.038+08:00 DEBUG 33664 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:40:15.092+08:00 DEBUG 33664 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:40:15.103+08:00 DEBUG 33664 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:40:15.109+08:00 DEBUG 33664 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:40:15.213+08:00  INFO 33664 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 1.57 seconds (process running for 2.013)
+2024-04-08T16:40:16.193+08:00  INFO 33664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-08T16:40:16.194+08:00 DEBUG 33664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-04-08T16:40:16.194+08:00 DEBUG 33664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-04-08T16:40:16.194+08:00 DEBUG 33664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-04-08T16:40:16.194+08:00 DEBUG 33664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7292707d
+2024-04-08T16:40:16.194+08:00 DEBUG 33664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@46b20eb9
+2024-04-08T16:40:16.195+08:00 DEBUG 33664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-08T16:40:16.195+08:00  INFO 33664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-04-08T16:40:16.202+08:00 DEBUG 33664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:40:16.208+08:00 DEBUG 33664 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:40:16.248+08:00 DEBUG 33664 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=6, password=123456}]
+2024-04-08T16:40:16.426+08:00 DEBUG 33664 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:40:16.428+08:00 DEBUG 33664 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=false, message=用户名或密码错误, data=null, error=error)]
+2024-04-08T16:40:16.439+08:00 DEBUG 33664 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T16:41:31.031+08:00  WARN 33664 --- [Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1570)
+2024-04-08T16:41:31.080+08:00  INFO 33664 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 33664 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:41:31.080+08:00  INFO 33664 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:41:31.266+08:00  WARN 33664 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginController': Unsatisfied dependency expressed through field 'loginService': Error creating bean with name 'loginService': Unsatisfied dependency expressed through field 'studentMapper': Error creating bean with name 'studentMapper' defined in file [E:\CodeData\dbsysLab\lab1\backend\target\classes\cn\edu\hit\backend\mapper\StudentMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory': Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [E:\CodeData\dbsysLab\lab1\backend\target\classes\mapper\StudentMapper.xml]'
+2024-04-08T16:41:31.284+08:00 ERROR 33664 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginController': Unsatisfied dependency expressed through field 'loginService': Error creating bean with name 'loginService': Unsatisfied dependency expressed through field 'studentMapper': Error creating bean with name 'studentMapper' defined in file [E:\CodeData\dbsysLab\lab1\backend\target\classes\cn\edu\hit\backend\mapper\StudentMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory': Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [E:\CodeData\dbsysLab\lab1\backend\target\classes\mapper\StudentMapper.xml]'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:950) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:616) ~[spring-context-6.0.13.jar:6.0.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:738) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:440) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.5.jar:3.1.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.5.jar:3.1.5]
+	at cn.edu.hit.backend.BackendApplication.main(BackendApplication.java:14) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.5.jar:3.1.5]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginService': Unsatisfied dependency expressed through field 'studentMapper': Error creating bean with name 'studentMapper' defined in file [E:\CodeData\dbsysLab\lab1\backend\target\classes\cn\edu\hit\backend\mapper\StudentMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory': Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [E:\CodeData\dbsysLab\lab1\backend\target\classes\mapper\StudentMapper.xml]'
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:747) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:492) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764) ~[spring-beans-6.0.13.jar:6.0.13]
+	... 23 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'studentMapper' defined in file [E:\CodeData\dbsysLab\lab1\backend\target\classes\cn\edu\hit\backend\mapper\StudentMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory': Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [E:\CodeData\dbsysLab\lab1\backend\target\classes\mapper\StudentMapper.xml]'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1513) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1407) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:764) ~[spring-beans-6.0.13.jar:6.0.13]
+	... 37 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [E:\CodeData\dbsysLab\lab1\backend\target\classes\mapper\StudentMapper.xml]'
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:654) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:642) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:325) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:323) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1498) ~[spring-beans-6.0.13.jar:6.0.13]
+	... 48 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception with message: Failed to parse mapping resource: 'file [E:\CodeData\dbsysLab\lab1\backend\target\classes\mapper\StudentMapper.xml]'
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:171) ~[spring-beans-6.0.13.jar:6.0.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-6.0.13.jar:6.0.13]
+	... 61 common frames omitted
+Caused by: java.io.IOException: Failed to parse mapping resource: 'file [E:\CodeData\dbsysLab\lab1\backend\target\classes\mapper\StudentMapper.xml]'
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:575) ~[mybatis-plus-extension-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.afterPropertiesSet(MybatisSqlSessionFactoryBean.java:444) ~[mybatis-plus-extension-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.getObject(MybatisSqlSessionFactoryBean.java:608) ~[mybatis-plus-extension-3.5.3.1.jar:3.5.3.1]
+	at com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration.sqlSessionFactory(MybatisPlusAutoConfiguration.java:224) ~[mybatis-plus-boot-starter-3.5.3.1.jar:3.5.3.1]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139) ~[spring-beans-6.0.13.jar:6.0.13]
+	... 62 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 13; columnNumber: 5; 元素类型 "result" 必须后跟属性规范 ">" 或 "/>"。
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:262) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127) ~[mybatis-3.5.13.jar:3.5.13]
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:85) ~[mybatis-3.5.13.jar:3.5.13]
+	at com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean.buildSqlSessionFactory(MybatisSqlSessionFactoryBean.java:572) ~[mybatis-plus-extension-3.5.3.1.jar:3.5.3.1]
+	... 68 common frames omitted
+Caused by: org.xml.sax.SAXParseException: 元素类型 "result" 必须后跟属性规范 ">" 或 "/>"。
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.seekCloseOfStartTag(XMLDocumentFragmentScannerImpl.java:1452) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1381) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2735) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:134) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247) ~[na:na]
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342) ~[na:na]
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:260) ~[mybatis-3.5.13.jar:3.5.13]
+	... 71 common frames omitted
+
+2024-04-08T16:41:41.163+08:00  INFO 12316 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 12316 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:41:41.164+08:00  INFO 12316 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:41:42.302+08:00 DEBUG 12316 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:41:42.359+08:00 DEBUG 12316 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:41:42.372+08:00 DEBUG 12316 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:41:42.377+08:00 DEBUG 12316 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:41:42.498+08:00  INFO 12316 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 1.626 seconds (process running for 2.126)
+2024-04-08T16:41:46.189+08:00  INFO 12316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-08T16:41:46.189+08:00 DEBUG 12316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-04-08T16:41:46.190+08:00 DEBUG 12316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-04-08T16:41:46.190+08:00 DEBUG 12316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-04-08T16:41:46.191+08:00 DEBUG 12316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@76feba3c
+2024-04-08T16:41:46.191+08:00 DEBUG 12316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@31e956ec
+2024-04-08T16:41:46.191+08:00 DEBUG 12316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-08T16:41:46.191+08:00  INFO 12316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-04-08T16:41:46.198+08:00 DEBUG 12316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:41:46.212+08:00 DEBUG 12316 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:41:46.252+08:00 DEBUG 12316 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=6, password=123456}]
+2024-04-08T16:41:46.434+08:00 DEBUG 12316 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:41:46.436+08:00 DEBUG 12316 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=false, message=用户名或密码错误, data=null, error=error)]
+2024-04-08T16:41:46.447+08:00 DEBUG 12316 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T16:42:40.264+08:00  INFO 31940 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Starting BackendApplication using Java 22 with PID 31940 (E:\CodeData\dbsysLab\lab1\backend\target\classes started by 15629 in E:\CodeData\dbsysLab\lab1\backend)
+2024-04-08T16:42:40.265+08:00  INFO 31940 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-04-08T16:42:41.414+08:00 DEBUG 31940 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-08T16:42:41.475+08:00 DEBUG 31940 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-04-08T16:42:41.486+08:00 DEBUG 31940 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-08T16:42:41.492+08:00 DEBUG 31940 --- [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-08T16:42:41.599+08:00  INFO 31940 --- [restartedMain] cn.edu.hit.backend.BackendApplication    : Started BackendApplication in 1.605 seconds (process running for 2.055)
+2024-04-08T16:42:43.564+08:00  INFO 31940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-08T16:42:43.564+08:00 DEBUG 31940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-04-08T16:42:43.565+08:00 DEBUG 31940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-04-08T16:42:43.565+08:00 DEBUG 31940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-04-08T16:42:43.565+08:00 DEBUG 31940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3262cf7
+2024-04-08T16:42:43.565+08:00 DEBUG 31940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@3e3335b0
+2024-04-08T16:42:43.566+08:00 DEBUG 31940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-08T16:42:43.566+08:00  INFO 31940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-04-08T16:42:43.571+08:00 DEBUG 31940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:42:43.579+08:00 DEBUG 31940 --- [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:42:43.630+08:00 DEBUG 31940 --- [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=6, password=123456}]
+2024-04-08T16:42:43.817+08:00 DEBUG 31940 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:42:43.818+08:00 DEBUG 31940 --- [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=true, message=Login successful, data=Login(userId=null, password=null, userName= (truncated)...]
+2024-04-08T16:42:43.830+08:00 DEBUG 31940 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T16:44:20.951+08:00 DEBUG 31940 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:44:20.952+08:00 DEBUG 31940 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:44:20.954+08:00 DEBUG 31940 --- [http-nio-8080-exec-2] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=, password=}]
+2024-04-08T16:44:20.961+08:00 DEBUG 31940 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Failed to complete request: java.lang.NullPointerException: Cannot invoke "cn.edu.hit.backend.pojo.Login.toString()" because "user" is null
+2024-04-08T16:44:20.962+08:00 ERROR 31940 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "cn.edu.hit.backend.pojo.Login.toString()" because "user" is null] with root cause
+
+java.lang.NullPointerException: Cannot invoke "cn.edu.hit.backend.pojo.Login.toString()" because "user" is null
+	at cn.edu.hit.backend.service.LoginService.login(LoginService.java:19) ~[classes/:na]
+	at cn.edu.hit.backend.controller.LoginController.login(LoginController.java:24) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.13.jar:6.0.13]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.15.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.13.jar:6.0.13]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.15.jar:10.1.15]
+	at java.base/java.lang.Thread.run(Thread.java:1570) ~[na:na]
+
+2024-04-08T16:44:20.980+08:00 DEBUG 31940 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}
+2024-04-08T16:44:20.982+08:00 DEBUG 31940 --- [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-04-08T16:44:20.988+08:00 DEBUG 31940 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:44:20.989+08:00 DEBUG 31940 --- [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Mon Apr 08 16:44:20 CST 2024, status=500, error=Internal Server Error, trace=java.lang.Nu (truncated)...]
+2024-04-08T16:44:21.004+08:00 DEBUG 31940 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500
+2024-04-08T16:44:26.425+08:00 DEBUG 31940 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:44:26.426+08:00 DEBUG 31940 --- [http-nio-8080-exec-4] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:44:26.428+08:00 DEBUG 31940 --- [http-nio-8080-exec-4] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=6, password=123456}]
+2024-04-08T16:44:26.433+08:00 DEBUG 31940 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:44:26.433+08:00 DEBUG 31940 --- [http-nio-8080-exec-4] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=true, message=Login successful, data=Login(userId=null, password=null, userName= (truncated)...]
+2024-04-08T16:44:26.435+08:00 DEBUG 31940 --- [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T16:44:39.876+08:00 DEBUG 31940 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:44:39.877+08:00 DEBUG 31940 --- [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:44:39.879+08:00 DEBUG 31940 --- [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=6, password=132}]
+2024-04-08T16:44:39.883+08:00 DEBUG 31940 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:44:39.884+08:00 DEBUG 31940 --- [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=false, message=用户名或密码错误, data=null, error=error)]
+2024-04-08T16:44:39.885+08:00 DEBUG 31940 --- [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T16:44:50.611+08:00 DEBUG 31940 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:44:50.612+08:00 DEBUG 31940 --- [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:44:50.613+08:00 DEBUG 31940 --- [http-nio-8080-exec-6] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=6, password=12345}]
+2024-04-08T16:44:50.616+08:00 DEBUG 31940 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:44:50.616+08:00 DEBUG 31940 --- [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=false, message=用户名或密码错误, data=null, error=error)]
+2024-04-08T16:44:50.617+08:00 DEBUG 31940 --- [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T16:44:54.512+08:00 DEBUG 31940 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:44:54.513+08:00 DEBUG 31940 --- [http-nio-8080-exec-5] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:44:54.513+08:00 DEBUG 31940 --- [http-nio-8080-exec-5] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=6, password=123456}]
+2024-04-08T16:44:54.515+08:00 DEBUG 31940 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:44:54.516+08:00 DEBUG 31940 --- [http-nio-8080-exec-5] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=true, message=Login successful, data=Login(userId=null, password=null, userName= (truncated)...]
+2024-04-08T16:44:54.517+08:00 DEBUG 31940 --- [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T16:45:04.430+08:00 DEBUG 31940 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:45:04.431+08:00 DEBUG 31940 --- [http-nio-8080-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:45:04.433+08:00 DEBUG 31940 --- [http-nio-8080-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=6, password=123456}]
+2024-04-08T16:45:04.435+08:00 DEBUG 31940 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:45:04.436+08:00 DEBUG 31940 --- [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=true, message=Login successful, data=Login(userId=null, password=null, userName= (truncated)...]
+2024-04-08T16:45:04.436+08:00 DEBUG 31940 --- [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T16:45:17.939+08:00 DEBUG 31940 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:45:17.940+08:00 DEBUG 31940 --- [http-nio-8080-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:45:17.941+08:00 DEBUG 31940 --- [http-nio-8080-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=5, password=OhC3wUgl5Y}]
+2024-04-08T16:45:17.944+08:00 DEBUG 31940 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:45:17.944+08:00 DEBUG 31940 --- [http-nio-8080-exec-9] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=true, message=Login successful, data=Login(userId=null, password=null, userName= (truncated)...]
+2024-04-08T16:45:17.945+08:00 DEBUG 31940 --- [http-nio-8080-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T16:45:24.310+08:00 DEBUG 31940 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:45:24.311+08:00 DEBUG 31940 --- [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:45:24.312+08:00 DEBUG 31940 --- [http-nio-8080-exec-8] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=5, password=1}]
+2024-04-08T16:45:24.315+08:00 DEBUG 31940 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:45:24.316+08:00 DEBUG 31940 --- [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=false, message=用户名或密码错误, data=null, error=error)]
+2024-04-08T16:45:24.317+08:00 DEBUG 31940 --- [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-04-08T16:46:15.254+08:00 DEBUG 31940 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : POST "/login", parameters={}
+2024-04-08T16:46:15.255+08:00 DEBUG 31940 --- [http-nio-8080-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to cn.edu.hit.backend.controller.LoginController#login(Map)
+2024-04-08T16:46:15.256+08:00 DEBUG 31940 --- [http-nio-8080-exec-10] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [{userId=5, password=1}]
+2024-04-08T16:46:15.259+08:00 DEBUG 31940 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json]
+2024-04-08T16:46:15.260+08:00 DEBUG 31940 --- [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [ApiResponse(success=false, message=用户名或密码错误, data=null, error=error)]
+2024-04-08T16:46:15.261+08:00 DEBUG 31940 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK

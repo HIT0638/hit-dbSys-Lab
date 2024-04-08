@@ -7,11 +7,18 @@
     <!-- 将类对象的属性与对应表属性名称不一样的进行映射，使其相互匹配   -->
     <resultMap id="StudentEntityMap" type="cn.edu.hit.backend.pojo.Student">
         <id column="id" property="student_id"></id>
+        <result column="password" property="password"></result>
+        <result column="userName" property="name"></result>
     </resultMap>
-    <select id="getAllStudents"
+
+    <select id="findAll"
             resultMap="StudentEntityMap">
         select * from students;
     </select>
 
+    <select id="findById"
+            resultMap="StudentEntityMap">
+        SELECT * FROM students WHERE student_id=#{Id}
+    </select>
 
 </mapper>

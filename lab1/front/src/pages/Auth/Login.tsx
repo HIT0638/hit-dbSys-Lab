@@ -19,25 +19,34 @@ const Login = () => {
 
 
     const handleSubmit = async () => {
+        event.preventDefault()
+
         try {
-            const user = [userId, password];
+            const user = { userId, password };
             const response = await request.post('/login', user);
+            console.log(response);
 
-            setUserName(response.data.userName);
-            setUserRole(response.data.userRole);
+            if(response.data.success){
+                setUserName(response.data.data.userName);
+                setUserRole(response.data.data.userRole);
 
-            // 保存到 localStorage
-            localStorage.setItem('userId', userId);
-            localStorage.setItem('userName', userName);
-            localStorage.setItem('userRole', userRole);
+                // 保存到 localStorage
+                localStorage.setItem('userId', userId);
+                localStorage.setItem('userName', userName);
+                localStorage.setItem('userRole', userRole);
 
-            // 根据用户角色进行跳转
-            switch (userRole) {
-                case 'admin':
-                    navigate("/admin/home")
-                    break;
-                default:
-                    navigate('/home');
+                // 根据用户角色进行跳转
+                switch (userRole) {
+                    case 'admin':
+                        navigate("/admin/home")
+                        break;
+                    default:
+                        navigate('/home');
+                }
+
+            } else{
+                alert(response.data.message);
+                navigate("/login");
             }
 
         } catch (error) {
@@ -61,7 +70,7 @@ const Login = () => {
             >
                 {/* 可以添加一个logo或标题 */}
                 <Typography component="h1" variant="h5">
-                    登录账号
+                    欢迎使用哈尔滨工业大学校园论坛，请登录！
                 </Typography>
 
                 <Box component="form" noValidate  sx={{ mt: 1 }} >
@@ -70,10 +79,10 @@ const Login = () => {
                         margin="normal"
                         required
                         fullWidth
-                        id="userID"
+                        id="userid"
                         label="用户名(学号/教工号)"
-                        name="userID"
-                        autoComplete="userID"
+                        name="userid"
+                        autoComplete="userid"
                         autoFocus
                         onChange={(e) => {setUserId(e.target.value)}}
                     />
@@ -105,7 +114,7 @@ const Login = () => {
                         <Link to="/forgot-password" >
                             忘记密码?
                         </Link>
-                        <Link to="/sign-up" >
+                        <Link to="/register" >
                             {"没有账号?注册"}
                         </Link>
                     </Box>

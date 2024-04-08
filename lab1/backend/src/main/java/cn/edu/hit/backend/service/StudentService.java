@@ -15,4 +15,8 @@ public class StudentService {
     public List<Student> getAllStudents(){
         return studentMapper.findAll();
     }
+
+    public Student getStudentById(String Id){
+        return studentMapper.findById(Id);
+    }
 }
