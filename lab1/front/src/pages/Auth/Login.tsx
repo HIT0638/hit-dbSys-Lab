@@ -7,7 +7,7 @@ import {
     Button,
     Typography
 } from '@mui/material';
-import request from "../../../util/request";
+import request from "@/util/request";
 
 const Login = () => {
     const navigate = useNavigate();
